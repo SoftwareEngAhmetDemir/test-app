@@ -12,9 +12,9 @@ function Detail() {
         axios.get(`https://62286b649fd6174ca82321f1.mockapi.io/case-study/products/${index}`)
             .then(res => {
                 setProducts(res.data);
-                console.log(res.data);
-            })
-    })
+                // console.log(res.data);
+            }).catch(e=>e)
+    },[index, products])
     return (
         <div className="container">
             <div className="grid grid-rows-4 grid-cols-4 gap-y-2 gap-x-8">
