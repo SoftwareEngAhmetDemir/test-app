@@ -15,14 +15,14 @@ function Detail() {
     }, [index, products])
     return (
         <div className="container">
-            <div className="grid grid-rows-4 grid-cols-4 gap-y-2 gap-x-8">
-                <div className="row-span-4 col-span-1 bg-white">
-                    <img src={`${products?.avatar}`} alt="" width='100%' />
+            <div className="grid lg:grid-rows-4 lg:grid-cols-4 gap-y-2 gap-x-8">
+                <div className="lg:row-span-4 lg:col-span-1 row-span-1 bg-white">
+                    <img src={`${products?.avatar}`} alt="" width='100%' style={{maxHeight:'300px'}}/>
                 </div>
-                <div className="row-span-3 col-span-2">
+                <div className="lg:row-span-3 lg:col-span-2 lg:text-left text-center">
                     <h1 className="font-bold text-xl">{products?.name}</h1>
                 </div>
-                <div className="price row-span-1 col-span-3 flex items-end text-xl">
+                <div className="price lg:row-span-1 lg:col-span-3 lg:flex lg:items-end text-xl lg:text-left text-center">
                     {products?.price}
                 </div>
             </div>
