@@ -1,4 +1,3 @@
-import React from 'react'
 import productsType from './productsType'
 
 function Card(props: productsType) {

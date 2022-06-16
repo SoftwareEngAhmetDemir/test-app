@@ -1,37 +1,40 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import {  useNavigate } from "react-router-dom";
 import productsType from "./productsType";
+
 function Create() {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const onSubmit:any = (data:productsType) => {
-  data.developerEmail = 'eng.ahmed.demir@gmail.com';
-    console.log(data);
-    axios.post('https://62286b649fd6174ca82321f1.mockapi.io/case-study/products',data).then(res=>{
-      console.log('inserted');
+  const onSubmit: any = (data: productsType) => {
+    data.developerEmail = 'eng.ahmed.demir@gmail.com';
+    axios.post('/products', data).then(res => {
+      alert('İnsterted Successfully');
+      navigate('/');
+
       // redirect to home page
-    }).catch(e=>e);
-  return data;
-};
+    }).catch(e => e);
+    return data;
+  };
   return (
     <div className="w-full max-w container">
       <h1 className="text-center font-bold">Create Product</h1>
       <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
-          <input className="input-text" id="username" type="text" placeholder="Product name" {...register("name")} required/>
+          <input className="input-text" id="username" type="text" placeholder="Product name" {...register("name")} required />
         </div>
         <div className="mb-6">
           <textarea id="message" className="text-area"
             placeholder="Description" {...register('description')} required></textarea>
         </div>
         <div className="mb-4">
-          <input className="input-text" id="username" type="text" placeholder="Image URL" {...register("avatar")} required/>
+          <input className="input-text" id="username" type="text" placeholder="Image URL" {...register("avatar")} required />
         </div>
         <div className="mb-4">
-      
           <div className="border-gray w-full list relative inline-block rounded">
-            <select defaultValue={''} className="input-text block appearance-none w-full bg-white border-gray text-gray" 
-            {...register("category")} required>
-            <option value="" disabled>Choose a drink</option>
+            <select defaultValue={''} className="input-text block appearance-none w-full bg-white border-gray text-gray"
+              {...register("category")} required>
+              <option value="" disabled>Choose a drink</option>
               <option value="opt2">Option 2</option>
               <option value="opt3">Option 3</option>
             </select>
@@ -41,16 +44,15 @@ function Create() {
           </div>
         </div>
         <div className="mb-4">
-          <input className="input-text" id="username" type="number" placeholder="Price" {...register("price")} required/>
+          <input className="input-text" id="username" type="number" placeholder="Price" {...register("price")} required />
         </div>
         <div className="flex items-center justify-between">
           <button className="btn text-black" type="submit">
-           SUBMIT
+            SUBMIT
           </button>
         </div>
       </form>
     </div>
   )
 }
-
 export default Create;

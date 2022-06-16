@@ -4,7 +4,7 @@ import Card from './Card';
 import productsType from "./productsType";
 
 function isImage(url: string) {
-    return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/i.test(url);
+    return /\.(jpg|jpeg|png|webp|avif|gif|svg|http)$/i.test(url);
 }
 function Cards(props: { items: productsType[] }) {
     let t: any = props.items;
