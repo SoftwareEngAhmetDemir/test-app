@@ -19,7 +19,7 @@ function Detail() {
         <div className="container">
             <div className="grid grid-rows-4 grid-cols-4 gap-y-2 gap-x-8">
                 <div className="row-span-4 col-span-1 bg-white">
-                    <img src={`${products?.avatar}`} alt="" width='100%' />
+                    <img src={`${products?.avatar}`} alt="" width='100%'/>
                 </div>
                 <div className="row-span-3 col-span-2">
                     <h1 className="font-bold text-xl">{products?.name}</h1>
