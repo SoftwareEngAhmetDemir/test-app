@@ -26,7 +26,8 @@ module.exports = {
      'gray':'#a1a1aa',
      'border-c':'#888a86',
      'title':'#9d9f9b',
-     'description':'#7d8379'
+     'description':'#7d8379',
+     'blue-500':'#89CFF0'
       },
       borderRadius: {
         DEFAULT: '10px',
@@ -37,5 +38,5 @@ module.exports = {
         // '48': '3rem',
       }
     },
-  plugins: [],
+    plugins: [],
 }
