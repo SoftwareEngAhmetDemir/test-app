@@ -16,9 +16,9 @@ function Cards(props: { items: productsType[] }) {
         return e;
     });
     return (
-        <div className='cards grid lg:grid-cols-4 gap-8 container mt-20'>
+        <div className='cards grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 container mt-20'>
             {t.map((e: productsType, index: number) => {
-                return <Link to={`/detail/${e.id}`} className='text-center' key={index}>
+                return <Link to={`/detail/${e.id}`} className='text-center w-full' key={index}>
                   <Card {...e}/>
                 </Link>
             })}

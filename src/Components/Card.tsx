@@ -3,7 +3,7 @@ import productsType from './productsType'
 
 function Card(props: productsType) {
     return (
-        <div className='cards'>
+        <div className='cards w-full'>
             <div className='bg-white p-3 rounded' style={{ width: '100%', height: '250px', background: 'white', objectFit: 'cover' }}>
                 <img className='rounded' width='100%' height='50px' style={{maxHeight:'200px'}}
                     src={`${props.avatar}`} alt="none" />
