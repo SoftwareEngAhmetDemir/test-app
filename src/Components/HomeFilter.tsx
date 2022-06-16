@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Cards from './Cards'
-import  productsType  from './productsType';
+import productsType from './productsType';
 
 function HomeFilter() {
-    const [products, setProducts]= useState<productsType[]>([]);
+    const [products, setProducts] = useState<productsType[]>([]);
 
-   
+
     useEffect(() => {
         axios.get(`https://62286b649fd6174ca82321f1.mockapi.io/case-study/products`)
             .then(res => {
@@ -14,17 +14,17 @@ function HomeFilter() {
                 console.log(res.data);
             })
     })
-   
+
     return (
         <>
             <div className='grid lg:grid-cols-6 gap-4 mx-10'>
                 <div className='lg:col-span-2 w-full'>
-                    <input type="text" className='h-12 w-full px-4 rounded' placeholder='Apple Watch Samsung S21,Macbook Pro,...'/>
+                <input type="text" className='h-12 w-full px-4 rounded' placeholder='Apple Watch Samsung S21,Macbook Pro,...'/>
                 </div>
-              
-                    {/* <input type="text" className='h-12 w-full' /> */}
 
-                    {/* <div className="list grid-cols-1 md:grid-cols-2 lg:col-end-7 lg:col-span-1 relative inline-block">
+                {/* <input type="text" className='h-12 w-full' /> */}
+
+                {/* <div className="list grid-cols-1 md:grid-cols-2 lg:col-end-7 lg:col-span-1 relative inline-block">
                         
                             <button type="button" className="menu-button h-12 w-full inline-flex items-center justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium 
                             hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500 text-gray rounded" id="menu-button" aria-expanded="true" aria-haspopup="true">
@@ -40,20 +40,20 @@ function HomeFilter() {
                             </div>
                         </div>
                     </div> */}
-                    <div className="list grid-cols-1 md:grid-cols-2 lg:col-end-7 lg:col-span-1 relative inline-block rounded">
-  <select className="h-12 block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-    <option>Really long option that will likely overlap the chevron</option>
-    <option>Option 2</option>
-    <option>Option 3</option>
-  </select>
-  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-  </div>
-</div>
+                <div className="list grid-cols-1 md:grid-cols-2 lg:col-end-7 lg:col-span-1 relative inline-block rounded">
+                    <select className="h-12 block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                        <option>Really long option that will likely overlap the chevron</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                    </div>
                 </div>
-                {products.length>0 ? <Cards items={[...products]}/> : <div>wait</div>}
-            </>
-            )
+            </div>
+            {products.length > 0 ? <Cards items={[...products]} /> : <div>wait</div>}
+        </>
+    )
 }
 
-            export default HomeFilter
+export default HomeFilter
