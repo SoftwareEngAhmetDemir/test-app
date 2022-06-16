@@ -1,5 +1,5 @@
 type productsType =   {
-    createdAt:string;
+   id:number;
     name: string;
     price: number;
     category: string;
