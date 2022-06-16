@@ -17,7 +17,7 @@ function RoutesIndex() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="detail/:index" element={<Detail />} />
+          <Route path="detail/:category/:index" element={<Detail />} />
           <Route path="create" element={<Create />} />
         </Routes>
       </BrowserRouter>

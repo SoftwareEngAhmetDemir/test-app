@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import productsType from "./productsType";
 
 function Create() {
@@ -8,7 +8,7 @@ function Create() {
   const { register, handleSubmit } = useForm();
   const onSubmit: any = (data: productsType) => {
     data.developerEmail = 'eng.ahmed.demir@gmail.com';
-    axios.post('/products', data).then(res => {
+    axios.post(`/${data.category}`, data).then(res => {
       alert('İnsterted Successfully');
       navigate('/');
 
@@ -32,11 +32,10 @@ function Create() {
         </div>
         <div className="mb-4">
           <div className="border-gray w-full list relative inline-block rounded">
-            <select defaultValue={''} className="input-text block appearance-none w-full bg-white border-gray text-gray"
+            <select defaultValue={'categories'} className="input-text block appearance-none w-full bg-white border-gray text-gray"
               {...register("category")} required>
-              <option value="" disabled>Choose a drink</option>
-              <option value="opt2">Option 2</option>
-              <option value="opt3">Option 3</option>
+              <option value="categories">categories</option>
+              <option value="products">products</option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray">
               <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>

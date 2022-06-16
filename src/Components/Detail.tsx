@@ -4,11 +4,11 @@ import { useParams } from "react-router-dom";
 import productsType from "./productsType";
 
 function Detail() {
-    let { index } = useParams();
+    let { index,category} = useParams();
     const [products, setProducts] = useState<productsType>();
 
     useEffect(() => {
-        axios.get(`/products/${index}`)
+        axios.get(`/${category}/${index}`)
             .then(res => {
                 setProducts(res.data);
             }).catch(e => e)
