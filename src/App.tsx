@@ -6,7 +6,7 @@ import './sytles/Header.scss'
 function App() {
   return (
     <div className="App">
-      <Header />
+     
       <RoutesIndex />
     </div>
   );
