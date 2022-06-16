@@ -1,0 +1,30 @@
+.menu-button {
+    &::after {
+        content: url('../../public/assets/downarrow.svg');
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 10px;
+    }
+}
+
+.list {
+    button {
+        background-color: #ffff;
+    }
+
+    .menu-tail {
+        display: none;
+    }
+
+    &:hover {
+        .menu-tail {
+            display: block;
+
+            a:hover {
+                background-color: rgba(200, 200, 200, 255);
+                color: #ffff;
+            }
+        }
+    }
+}

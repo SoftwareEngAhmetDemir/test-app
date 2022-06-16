@@ -1,0 +1,25 @@
+.cards {
+    .brand {
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        .text {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .price {
+        height: 40px;
+    }
+}
+.price {
+    &::before{
+        content: '$' !important;
+    }
+}

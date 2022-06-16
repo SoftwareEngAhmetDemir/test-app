@@ -1,0 +1,24 @@
+header {
+    background-color: #ffffff;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-radius: 20px;
+    margin: 40px 65px 60px;
+
+    &::after {
+        content: url("../../public/assets/plus.svg");
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: #ffffff;
+        border-radius: 50%;
+    }
+}
+
+@import './drop-list.scss';
+@import './cards.scss';
