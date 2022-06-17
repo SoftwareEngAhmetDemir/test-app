@@ -2,22 +2,30 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import productsType from "./productsType";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Create() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const onSubmit: any = (data: productsType) => {
     data.developerEmail = 'eng.ahmed.demir@gmail.com';
     axios.post(`/${data.category}`, data).then(res => {
-      alert('İnsterted Successfully');
-      navigate('/');
+     
+      toast.success("Inserted Sucess", { theme: "colored" })
+     setTimeout(() => {
+       navigate('/');
+     }, 2000);
 
       // redirect to home page
-    }).catch(e => e);
+    }).catch(e => {
+      toast.error("Inserted not Sucess", { theme: "colored" })
+      return e
+    });
     return data;
   };
   return (
     <div className="w-full max-w container">
+      <ToastContainer />
       <h1 className="text-center font-bold">Create Product</h1>
       <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
@@ -43,7 +51,7 @@ function Create() {
           </div>
         </div>
         <div className="mb-4">
-          <input className="input-text" id="username" type="number" placeholder="Price" {...register("price")} required />
+          <input className="input-text" id="username" type="number" placeholder="Price" min="1" {...register("price")} required />
         </div>
         <div className="flex items-center justify-between">
           <button className="btn text-black" type="submit">
