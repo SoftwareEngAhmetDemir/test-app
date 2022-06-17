@@ -27,7 +27,7 @@ function HomeFilter() {
         setProducts(fullData);
         if (word.length > 0) {
             let productst = products.filter(product => {
-                return product?.category?.toString().toLowerCase().trim().includes(word)
+                return product?.name?.toString().toLowerCase().trim().includes(word)
             })
             products = [...productst];
             setProducts(productst);
