@@ -10,7 +10,7 @@ module.exports = {
       sm: ['14px', '20px'],
       base: ['16px', '24px'],
       lg: ['20px', '28px'],
-      xl: ['24px', '32px'],
+      xl: ['35px', '32px'],
     },
     container: {
       center: true,
@@ -28,8 +28,8 @@ module.exports = {
       'title': '#9d9f9b',
       'description': '#7d8379',
       'blue-500': '#89CFF0',
-      'white':'#ffff',
-      'black':'#000'
+      'white': '#ffff',
+      'black': '#000'
     },
     borderRadius: {
       DEFAULT: '10px',
@@ -37,7 +37,7 @@ module.exports = {
   },
   extend: {
     height: {
-       '48': '3rem',
+      '48': '3rem',
     },
     border: {
       innerWidth: 2

@@ -1,0 +1,44 @@
+header {
+    background-color: #ffffff;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-radius: 20px;
+    margin: 40px 65px 60px;
+
+    .register {
+        position: fixed;
+        right: 30px;
+        bottom: 50px;
+        width: 70px;
+        height: 70px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        z-index: 9999;
+
+        i {
+            font-size: 5rem
+        }
+    }
+}
+
+select {
+    font-size: 100%;
+    padding: 10px;
+    padding-right: 180px;
+    margin-left: 30px;
+    border-radius: 1000000px;
+    border: 1px solid #707070;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iLW1yLTEgbWwtMiBoLTUgdy01IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iY3VycmVudENvbG9yIgogICAgYXJpYS1oaWRkZW49InRydWUiPgogICAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIgogICAgICAgIGQ9Ik01LjI5MyA3LjI5M2ExIDEgMCAwMTEuNDE0IDBMMTAgMTAuNTg2bDMuMjkzLTMuMjkzYTEgMSAwIDExMS40MTQgMS40MTRsLTQgNGExIDEgMCAwMS0xLjQxNCAwbC00LTRhMSAxIDAgMDEwLTEuNDE0eiIKICAgICAgICBjbGlwLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    background-position-y: 10px;
+    margin-right: 0rem;
+    background-size: 30px;
+}

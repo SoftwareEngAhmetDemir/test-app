@@ -1,4 +1,3 @@
-import React from "react";
 import {
   BrowserRouter,
   Routes,
@@ -10,7 +9,6 @@ import Header from "../Components/Header";
 import Home from "../Components/Home";
 
 function RoutesIndex() {
-
   return (
     <div>
       <BrowserRouter >
